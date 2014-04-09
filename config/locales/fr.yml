@@ -17,6 +17,8 @@ fr:
               blank: "Veuillez renseigner la description"
             link:
               blank: "Veuillez renseigner le lien"
+              taken: "Une entrée avec la même url existe déjà"
+              dead: "Lien mort"
         user:
           attributes:
             last_name:
