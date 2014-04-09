@@ -118,26 +118,26 @@
             // If maximum height is exceeded a scrollbar will be displayed.
             maxHeight: false,
             includeSelectAllOption: false,
-            selectAllText: ' Select all',
+            selectAllText: ' Sélectionner tout',
             selectAllValue: 'multiselect-all',
             enableFiltering: false,
             enableCaseInsensitiveFiltering: false,
-            filterPlaceholder: 'Search',
+            filterPlaceholder: 'Rechercher',
             // possible options: 'text', 'value', 'both'
             filterBehavior: 'text',
             preventInputChangeEvent: false,
-            nonSelectedText: 'None selected',
-            nSelectedText: 'selected',
+            nonSelectedText: 'Aucun',
+            nSelectedText: 'sélectionné(s)',
             numberDisplayed: 3
         },
         
         // Templates.
         templates: {
-            button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
-            ul: '<ul class="multiselect-container dropdown-menu"></ul>',
-            filter: '<div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div>',
-            li: '<li><a href="javascript:void(0);"><label></label></a></li>',
-            liGroup: '<li><label class="multiselect-group"></label></li>'
+          button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+          ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+          filter: '<div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div>',
+          li: '<li><a href="javascript:void(0);"><label></label></a></li>',
+          liGroup: '<li><label class="multiselect-group"></label></li>'
         },
         
         constructor: Multiselect,

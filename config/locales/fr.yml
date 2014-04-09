@@ -5,10 +5,11 @@ fr:
   activerecord:
     errors:
       models: 
-        feeds:
+        feed:
           attributes:
             name:
               blank: "Veuillez renseigner le nom"
+              taken: "Un fil RSS existe déjà avec ce nom"
         item:
           attributes:
             title:

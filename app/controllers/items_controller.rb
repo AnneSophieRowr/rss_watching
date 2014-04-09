@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @item.feeds << Feed.find(1)
   end
 
   def edit
