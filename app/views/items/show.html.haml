@@ -1,0 +1,24 @@
+%legend.row
+  %h2.pull-left= @item.title
+  .btn-group.pull-right
+    = link_to edit_item_path(@item), class: 'btn btn-default', title: t('item.edit') do
+      %span.fa.fa-edit
+    = link_to item_path(@item), class: 'btn btn-default', title: t('item.destroy'), method: :delete, data: { confirm: t('item.confirm_destroy') } do
+      %span.fa.fa-trash-o
+
+.well
+  %dl.dl-horizontal
+    %dt= t('item.title')
+    %dd= @item.title
+    %dt= t('item.description')
+    %dd= @item.description
+    %dt= t('item.link')
+    %dd= @item.link
+    %dt= t('item.date')
+    %dd= @item.date
+    %dt= t('item.user_id')
+    %dd= @item.user.decorate.name
+    %dt= t('item.feeds')
+    %dd= @item.feeds_links
+
+= link_to t('helpers.submit.back'), :back, :class => 'btn btn-default'

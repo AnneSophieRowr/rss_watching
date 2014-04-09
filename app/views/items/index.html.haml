@@ -1,0 +1,13 @@
+.row.bar
+  .col-md-8
+    .title.pull-left= t('model.items')
+  .col-md-4
+    .btn-group.pull-right
+      = link_to new_item_path, :class => 'btn btn-default', :title => t('item.new') do
+        %span.fa.fa-plus
+
+#items.partial
+  = render :partial => 'listing', :locals => {:items => @items}
+
+
+

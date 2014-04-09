@@ -1,0 +1,20 @@
+fr:
+  simple_form:
+    required:
+      text: 'required'
+      mark: '*'
+    labels:
+      user:
+        last_name: 'Nom de famille'
+        first_name: 'Prénom'
+        password: 'Mot de passe'
+        password_confirmation: 'Confirmation du mot de passe'
+      feed: 
+        name: "Nom"
+      item:
+        title: "Titre"
+        description: "Description"
+        date: "Date de publication"
+        link: "Lien"
+        user_id: "Recommandé par"
+        feeds: "Fil(s)"

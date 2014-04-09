@@ -1,0 +1,142 @@
+fr:
+  errors:
+    messages:
+      extension_white_list_error: "Le format n'est pas bon"
+  activerecord:
+    errors:
+      models: 
+        feeds:
+          attributes:
+            name:
+              blank: "Veuillez renseigner le nom"
+        item:
+          attributes:
+            title:
+              blank: "Veuillez renseigner le nom"
+            description:
+              blank: "Veuillez renseigner la description"
+            link:
+              blank: "Veuillez renseigner le lien"
+        user:
+          attributes:
+            last_name:
+              blank: "veuillez renseigner le nom de famille"
+            first_name:
+              blank: "Veuillez renseigner le prénom"
+            email:
+              taken: "Cet email est déjà pris"
+              blank: "Veuillez renseigner l'email"
+            password:
+              blank: "Veuillez renseigner le mot de passe"
+              too_short: "Le mot de passe est trop court"
+            password_confirmation:
+              blank: "Veuillez confirmer le mot de passe"
+              confirmation: "Veuillez confirmer le mot de passe"
+  model:
+    users: "Utilisateur(s)"
+    feeds: "Fils RSS"
+    items: "Entrées"
+    time: "Temps d'écoute"
+  feed:
+    show: "Voir le fil"
+    manage: "Gérer les items du fil"
+    new: "Créer un fil"
+    create: "Le fil %{name} a été créé avec succès."
+    edit: "Mettre à jour un fil"
+    update: "Le fil %{name} a été mis à jour avec succès."
+    destroy: "Supprimer ce fil"
+    confirm_destroy: "Etes-vous sûr de vouloir supprimer ce fil?"
+    destroyed: "Le fil %{name} a été supprimé avec succès."
+    empty: "Aucun fil"
+    name: "Nom"
+    items_count: "Nombre d'entrée(s)"
+  item:
+    show: "Voir l'entrée"
+    new: "Créer une entrée"
+    create: "L'entrée %{name} a été créé avec succès."
+    edit: "Mettre à jour une entrée"
+    update: "L'entrée %{name} a été mise à jour avec succès."
+    destroy: "Supprimer cette entrée"
+    confirm_destroy: "Etes-vous sûr de vouloir supprimer cette entrée?"
+    destroyed: "L'entrée %{name} a été supprimée avec succès."
+    empty: "Aucun entrée"
+    title: "Titre"
+    description: "Description"
+    date: "Date de publication"
+    link: "Lien"
+    user_id: "Recommandé par"
+    feeds: "Fil(s)"
+  user:
+    new: "Créer un utilisateur"
+    create: "L'utilisateur %{name} a été créé avec succès."
+    edit: "Mettre à jour un utilisateur"
+    update: "L'utilisateur %{name} a été mis à jour avec succès."
+    destroy: "Supprimer cet utilisteur"
+    confirm_destroy: "Etes-vous sûr de vouloir supprimer cet utilisateur?"
+    destroyed: "L'utilisateur %{name} a été supprimé avec succès."
+    empty: "Aucun utilisateur"
+    last_name: "Nom de famille"
+    first_name: "Prénom"
+    name: "Nom"
+  views:
+    pagination:
+      first: "Premier"
+      last: "Dernier"
+      previous: "&lsaquo;&lsaquo;"
+      next: "&rsaquo;&rsaquo;"
+      truncate: "..."
+  titles:
+    edit: "Modifier"
+    reset: "Remettre à zéro"
+  helpers:
+    words:
+      play: "Lire"
+      pause: "Pause"
+      yeslabel: "Oui"
+      nolabel: "Non"
+      none: "Aucun(e)"
+      all: "Tous"
+      results: "R&eacute;sultat(s)"
+      choose: "Choisir..."
+      start: "Du"
+      end: "Au"
+    submit:
+      create: "Créer"
+      update: "Mettre à jour"
+      cancel: "Annuler"
+      back: "Retour"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: " "
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+  datetime:
+    distance_in_words: 
+      x_months:
+        one: "Il y a un mois"
+        other: "Il y a %{count} mois"
+      about_x_months:
+        one: "Il y a un mois"
+        other: "Il y a % {count} mois"
+      x_days:
+        one: "Aujourd'hui"
+        other: "Il y a %{count} jours"
+      about_x_hours:
+        one: "Il y a une heure"
+        other: "Il y a %{count} heures"

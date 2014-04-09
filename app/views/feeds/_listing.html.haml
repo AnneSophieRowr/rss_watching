@@ -1,0 +1,30 @@
+- if feeds.empty?
+  = t('feed.empty')
+
+- else
+  .row.paginate
+    .col-md-8
+      = paginate feeds
+    .col-md-4
+      %p.pull-right= [feeds.total_count.to_s, t('model.feeds').downcase].join(" ")
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th= t('feed.name')
+        %th= t('feed.items_count')
+        %th
+    %tbody
+      - feeds.each do |feed|
+        %tr
+          %td= feed.name
+          %td= feed.items.count
+          %td
+            = link_to feed_path(feed, format: 'atom'), class: 'btn btn-default btn-sm', title: t('feed.show') do
+              %span.fa.fa-rss
+            = link_to edit_feed_path(feed), :class => 'btn btn-default btn-sm', :title => t('feed.edit') do
+              %span.fa.fa-edit
+            = link_to feed_path(feed), :class => 'btn btn-default btn-sm', :title => t('feed.destroy'), method: :delete, data: { confirm: t('feed.confirm_destroy') } do
+              %span.fa.fa-times
+
+
