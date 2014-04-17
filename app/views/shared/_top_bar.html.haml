@@ -8,7 +8,7 @@
         %li= link_to t('model.feeds'), feeds_path
         %li= link_to t('model.items'), items_path
       %ul.nav.navbar-nav.navbar-right
-        %li= link_to current_user.name, edit_user_path(current_user)
+        %li= link_to current_user.name, '#'
         %li.pull-right.destroy
           = link_to destroy_user_session_path, method: :delete, alt: t('devise.logout') do
             = image_tag "exclamation.png", alt: t('devise.logout').html_safe, title: t('devise.logout'), class: :destroy
