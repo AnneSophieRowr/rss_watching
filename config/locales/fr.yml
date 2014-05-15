@@ -20,6 +20,7 @@ fr:
               blank: "Veuillez renseigner le lien"
               taken: "Une entrée avec la même url existe déjà"
               dead: "Lien mort"
+              invalid: "Le lien n'est pas valide."
   model:
     feeds: "Fils RSS"
     items: "Entrées"

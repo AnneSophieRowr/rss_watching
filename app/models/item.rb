@@ -7,13 +7,16 @@ class Item < ActiveRecord::Base
 
   validates_uniqueness_of :link
 
-  validate :dead_link
+  validate :valid_link
 
   require 'net/http'
-  def dead_link
-    url = URI.parse(link)
-    req = Net::HTTP.new(url.host, url.port)
-    res = req.request_head(url.path)
-    errors.add(:link, :dead) unless res.code == '200'
+  def valid_link
+    begin
+      url = URI.parse(link)
+      req = Net::HTTP.get_response(url.host, '/')
+      errors.add(:link, :dead) unless req.code == '200'
+    rescue URI::InvalidURIError
+      errors.add(:link, :invalid)
+    end
   end
 end
