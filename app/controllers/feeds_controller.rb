@@ -1,5 +1,6 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :authenticate_user!, only: [:show]
 
   def index
     @feeds = Kaminari.paginate_array(FeedDecorator.decorate_collection(Feed.all)).page(params[:page])
