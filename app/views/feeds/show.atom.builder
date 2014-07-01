@@ -1,19 +1,20 @@
 feed_options = {
   language: 'fr-FR',
-  id: @feed.friendly_id
+  id: feed_url(@feed, format: 'atom')
 }
 
 atom_feed feed_options do |feed|
   feed.title @feed.name
+  feed.updated @feed.items.maximum(:date)
   @feed.items.each do |item|
     feed.entry item do |entry|
-      entry.link item.article_link
       entry.title item.title
-      entry.description item.description
+      entry.content item.description
       entry.author do |author|
         author.name item.user.decorate.name
       end
-      entry.pubDate item.date
+      entry.updated item.date
+      entry.url item.article_link
     end
   end
 end
