@@ -15,6 +15,6 @@ fr:
         title: "Titre"
         description: "Description"
         date: "Date de publication"
-        link: "Lien"
+        article_link: "Lien"
         user_id: "Recommandé par"
         feeds: "Fil(s)"

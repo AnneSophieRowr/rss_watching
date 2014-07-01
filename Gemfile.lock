@@ -49,6 +49,8 @@ GEM
     execjs (2.0.2)
     font-awesome-sass (4.0.2)
       sass-rails (>= 3.1.1)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -139,6 +141,7 @@ DEPENDENCIES
   devise_ldap_authenticatable
   draper
   font-awesome-sass
+  friendly_id
   haml
   jquery-rails
   jquery-ui-rails

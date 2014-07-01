@@ -8,6 +8,8 @@ gem 'devise'
 gem 'devise_ldap_authenticatable'
 gem 'thin'
 
+gem 'friendly_id'
+
 gem 'simple_form'
 gem 'draper'
 gem 'kaminari'

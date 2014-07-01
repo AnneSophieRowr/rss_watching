@@ -20,7 +20,7 @@
           %td= feed.name
           %td= feed.items.count
           %td
-            = link_to feed_path(feed, format: 'atom'), class: 'btn btn-default btn-sm', title: t('feed.show') do
+            = link_to feed_path(feed, format: 'atom'), class: 'btn btn-default btn-sm', target: :blank, title: t('feed.show') do
               %span.fa.fa-rss
             = link_to edit_feed_path(feed), :class => 'btn btn-default btn-sm', :title => t('feed.edit') do
               %span.fa.fa-edit

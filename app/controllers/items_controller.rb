@@ -12,7 +12,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.feeds << Feed.find(1)
   end
 
   def edit
@@ -54,7 +53,7 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:title, :link, :description, :date, :user_id, feed_ids: [])
+    params.require(:item).permit(:title, :article_link, :description, :date, :user_id, feed_ids: [])
   end
 
   def fix_datetime_params

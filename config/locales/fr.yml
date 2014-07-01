@@ -16,7 +16,7 @@ fr:
               blank: "Veuillez renseigner le nom"
             description:
               blank: "Veuillez renseigner la description"
-            link:
+            article_link:
               blank: "Veuillez renseigner le lien"
               taken: "Une entrée avec la même url existe déjà"
               dead: "Lien mort"
@@ -51,7 +51,7 @@ fr:
     title: "Titre"
     description: "Description"
     date: "Date de publication"
-    link: "Lien"
+    article_link: "Lien"
     user_id: "Recommandé par"
     feeds: "Fil(s)"
   views:

@@ -6,7 +6,7 @@ class ItemDecorator < Draper::Decorator
   end
 
   def link
-    h.link_to object.link.truncate(40, omission: '...'), object.link, target: :blank
+    h.link_to object.article_link.truncate(40, omission: '...'), object.article_link, target: :blank
   end
 
 end

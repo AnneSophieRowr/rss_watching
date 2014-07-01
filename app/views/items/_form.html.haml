@@ -3,7 +3,7 @@
   .well
     = f.input :description
     = f.input :title
-    = f.input :link
+    = f.input :article_link
     = f.input :user_id, collection: users, selected: (@item.user.nil? ? current_user.id : @item.user.id)
     = f.input :date, as: :datetimepicker
     = f.association :feeds, collection: feeds, input_html: {multiple: 'multiple'}

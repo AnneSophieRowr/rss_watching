@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
-  devise :ldap_authenticatable, :rememberable, :trackable
+  #devise :ldap_authenticatable, :rememberable, :trackable
+  devise :database_authenticatable, :rememberable, :trackable
   default_scope { order('last_name') }
   has_many :items
-  before_save :get_ldap_infos
+  #before_save :get_ldap_infos
 
   def get_ldap_infos
     self.email = Devise::LDAP::Adapter.get_ldap_param(self.email, "userPrincipalName").first

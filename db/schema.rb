@@ -11,11 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402102305) do
+ActiveRecord::Schema.define(version: 20140701095138) do
 
   create_table "feeds", force: true do |t|
     t.string "name", null: false
+    t.string "slug", null: false
   end
+
+  add_index "feeds", ["slug"], name: "index_feeds_on_slug", unique: true, using: :btree
 
   create_table "feeds_items", force: true do |t|
     t.integer "item_id"
@@ -23,19 +26,19 @@ ActiveRecord::Schema.define(version: 20140402102305) do
   end
 
   create_table "items", force: true do |t|
-    t.string   "title",       null: false
-    t.string   "link",        null: false
-    t.text     "description", null: false
-    t.datetime "date",        null: false
-    t.integer  "user_id",     null: false
+    t.string   "title",        null: false
+    t.string   "article_link", null: false
+    t.text     "description",  null: false
+    t.datetime "date",         null: false
+    t.integer  "user_id",      null: false
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",               default: "", null: false
-    t.string   "last_name",                        null: false
-    t.string   "first_name",                       null: false
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",       default: 0,  null: false
+    t.string   "email",              default: "", null: false
+    t.string   "encrypted_password", default: "", null: false
+    t.string   "last_name"
+    t.string   "first_name",                      null: false
+    t.integer  "sign_in_count",      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
